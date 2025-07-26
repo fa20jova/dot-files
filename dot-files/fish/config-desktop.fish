@@ -4,7 +4,7 @@ function fish_prompt
 
     # Calculate package-level wattage via RAPL
     set s0 (cat /sys/class/powercap/intel-rapl:0/energy_uj 2>/dev/null)
-    sleep .5
+    sleep .1
     set s1 (cat /sys/class/powercap/intel-rapl:0/energy_uj 2>/dev/null)
     if test -z "$s0" -o -z "$s1"
         set wattage "N/A"
